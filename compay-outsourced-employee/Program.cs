@@ -10,8 +10,9 @@ namespace CompanyOutsourcedEmployee
         static void Main(string[] args)
         {
             List<Employee> list = new List<Employee>();
+            Employee employees = new Employee(); 
 
-            Console.WriteLine("Enter the number of employees: ");
+            Console.Write("Enter the number of employees: ");
             int n = int.Parse(Console.ReadLine()); 
 
             for(int i = 1; i <= n; i++)
@@ -35,14 +36,8 @@ namespace CompanyOutsourcedEmployee
                     double additional = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     list.Add(new OutsourcedEmployee(name, hours, valuePerHour, additional));  
                 }
-
-
-
-
             }
-            
-
-
+            employees.listEmployees(list);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace compay_outsourced_employee.Entities
 
         }
 
-        public sealed override double payment()
+        public override double payment()
         {
             return base.payment() + (1.1 * AdditionalCharge);
         }
