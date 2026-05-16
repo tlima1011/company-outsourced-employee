@@ -38,6 +38,7 @@ namespace CompanyOutsourcedEmployee
                 }
             }
             employees.listEmployees(list);
+            employees.ordenadaPorSalarioDesc(list);
         }
     }
 }

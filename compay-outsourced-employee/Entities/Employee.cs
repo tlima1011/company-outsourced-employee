@@ -35,5 +35,16 @@ namespace compay_outsourced_employee.Entities
                 Console.WriteLine($"{emp.Name} - $ {emp.payment().ToString("F2",CultureInfo.InvariantCulture)}");
             }
         }
+
+        public void ordenadaPorSalarioDesc(List<Employee> list)
+        {
+            //var ordenada = ""; 
+            Console.WriteLine("\nPAYMENTS by Payment: ");
+            var ordenada = list.OrderByDescending(emp => emp.payment());
+            foreach (Employee emp in ordenada) 
+            {
+                Console.WriteLine($"{emp.Name} - $ {emp.payment().ToString("F2", CultureInfo.InvariantCulture)}");
+            }
+        }
     }
 }
